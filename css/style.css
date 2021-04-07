@@ -107,6 +107,7 @@ body{
 .nav-list{
    margin-bottom: 60px;
    padding-left: 0;
+   list-style: none;
 }
 .nav-text{
    margin-left: 13px;
