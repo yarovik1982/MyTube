@@ -4,6 +4,10 @@
 ul,li{
    list-style: none;
 }
+button, input{
+   border: none;
+   outline: none;
+}
 a{
    color: inherit;
    text-decoration: none;
@@ -14,7 +18,7 @@ body{
    font-weight: 400;
 }
 .header {
-   padding-top: 20px;
+   padding: 20px;
    padding-left: 32px;
    padding-right: 70px;
    padding-bottom: 20px;
@@ -60,6 +64,7 @@ body{
    margin-left: 60px;
    max-width:830px;
    width: 50%;
+   margin-right: 40px;
 }
 .input-search{
    padding-left: 23px;
@@ -109,13 +114,14 @@ body{
    top: 114px;
    height: calc(100% - 114px);
    overflow-y: auto;
-   width:12%;
+   width:230px;
 }
 .content {
    width: 100%;
    margin-top: 85px;
-   padding-left: 13%;
+   padding-left: 250px;
    padding-top: 30px;
+   padding-right: 70px;
 }
 .nav-menu{
    margin-top: 0;
@@ -191,6 +197,11 @@ body{
    line-height: 33px;
    color: #19202C;
 }
+.channel-header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
 .channel-avatar{
    width: 50px;
    height: 50px;
@@ -199,37 +210,50 @@ body{
 .channel-text{
    margin-left: 20px;
 }
+.channel-subtext {
+   font-size: 16px;
+   line-height: 20px;
+   color: #C2C2C2;
+   margin-left: 19px;
+}
+.channel-subscribe {
+   font-size: 16px;
+   line-height: 20px;
+   color: #FFFFFF;
+   padding: 10px 20px;
+   border-radius: 20px;
+   background-color: #FF0000;
+   margin-right: 100px;
+}
 .channel-slider{
    margin-top: 30px;
 }
-.video-card{
-   width: 250px;
-}
+
 .video-card__second{
-   width: 540px;
+  
    margin-top: 20px;
 }
 .video-thumb {
-   width: 250px;
+   width: 100%;
    height: 150px;
    overflow: hidden;
    border-radius: 14px;
    position: relative;
 }
 .video-thumb__second{
-   width: 540px;
+   width: 100%;
    height: 250px;
    overflow: hidden;
    border-radius: 14px;
    position: relative;
 }
 .thumbnail {
-   width: 250px;
+   width: 100%;
    height: 150px;
    object-fit: cover;
 }
 .thumbnail__second{
-   width: 540px;
+   width: 100%;
    height: 250px;
    object-fit: cover;
 }
@@ -298,5 +322,112 @@ body{
    align-items: center;
    width: 66px;
    top: 15px;
-   right: 9%;
+   right: 1%;
+}
+.mobile-search{
+   display: none;
+}
+
+.mobile-sidebar {
+   display: none;
+}
+
+@media (max-width:860px) {
+   .icons-group{
+      display: none;
+   }
+   .user{
+      margin-left: auto;
+   }
+}
+@media (max-width:640px){
+   .mobile-search{
+      display: block;
+      margin-left: auto;
+   }
+   .user{
+      margin-left: 20px;
+   }
+   .input-group{
+      position: fixed;
+      top: -100px;
+      left: 0;
+      opacity: 0;
+      width: 68%;
+      margin-left: 25px;
+   }
+   .input-group.is-open{
+      top: 20px;
+      opacity: 1;
+   }
+   .menu-button{
+      display: none;
+   }
+   .sidebar{
+      display: none;
+   }
+   .content{
+      padding-left: 32px;
+   }
+   .mobile-sidebar {
+      display: block;
+      position: fixed;
+      z-index: 99;
+      bottom: 0;
+      left: 0; 
+      width: 100%;
+      background-color: #fff;
+   }
+   .mobile-sidebar .nav-link{
+      display: flex;
+      flex-direction: column;
+   }
+   .mobile-sidebar .nav-list{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 0;
+      padding-top: 13px;
+      padding-bottom: 11px;
+      border-top: 1px solid #f1f1f1;
+   }
+   .mobile-sidebar .nav-link{
+      margin-bottom: 0;
+   }
+   .nav-text{
+      margin-left: 0; 
+      font-size: 10px;  
+   }
+   .user-avatar{
+      margin-left: auto;
+   }
+   .slider-buttons{
+      display: none;
+   }
+   .channel-subscribe{
+      margin-left: auto;
+      margin-right: 0;
+   }
+   .swiper-wrapper{
+      display: flex;
+      flex-direction: column;
+   }
+   .header, .content{
+      padding-right: 32px;
+   }
+}
+@media (max-width:470px){
+   .channel-header{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   .channel-subscribe{
+      margin-left: 0;
+      margin-bottom: 20px;
+      margin-top: 20px;
+   }
+   .channel-title{
+      margin: 0 auto;
+   }
 }
