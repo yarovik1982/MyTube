@@ -95,6 +95,7 @@ body{
 .icon-link{
    fill: #000;
    opacity: .24;
+   transition:opacity 1s linear; 
 }
 .icon-link:not(:last-child){
    margin-right: 50px;
