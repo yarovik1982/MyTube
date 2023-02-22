@@ -159,6 +159,7 @@ body{
 }
 .nav-link .icon{
    fill:#898989;
+   transition: all 3s linear;
 }
 .nav-img{
    width: 26px;
